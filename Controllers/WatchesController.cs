@@ -43,8 +43,7 @@ namespace MyWatchListWebApp.Controllers
             //var filteredList = GetFilteredWatchList(await _context.Watch.ToListAsync(), SearchReferenceNumber, SearchBrand, SearchModel, SearchMovement, SearchCaseMaterial, SearchBandMaterial, SearchDialColor, SearchBraceletColor, SearchPowerReserve, SearchCaseDiameter, SearchLugToLugWidth, SearchThickness);
 
             return _context.Watch != null ?
-                        View("Index", await _context.Watch.Where(
-                            w => 
+                        View("Index", await _context.Watch.Where( w => 
                                 (string.IsNullOrEmpty(SearchReferenceNumber) || w.ReferenceNumber.Contains(SearchReferenceNumber)) &&
                                 (string.IsNullOrEmpty(SearchBrand) || w.Brand.Contains(SearchBrand)) &&
                                 (string.IsNullOrEmpty(SearchModel) || w.Model.Contains(SearchModel)) &&
