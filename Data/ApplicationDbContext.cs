@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MyWatchListWebApp.Models;
 
 namespace MyWatchListWebApp.Data
 {
@@ -9,5 +10,6 @@ namespace MyWatchListWebApp.Data
             : base(options)
         {
         }
+        public DbSet<MyWatchListWebApp.Models.Watch> Watch { get; set; } = default!;
     }
 }

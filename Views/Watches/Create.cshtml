@@ -1,0 +1,93 @@
+﻿@model MyWatchListWebApp.Models.Watch
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Watch</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ReferenceNumber" class="control-label"></label>
+                <input asp-for="ReferenceNumber" class="form-control" />
+                <span asp-validation-for="ReferenceNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Brand" class="control-label"></label>
+                <input asp-for="Brand" class="form-control" />
+                <span asp-validation-for="Brand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Model" class="control-label"></label>
+                <input asp-for="Model" class="form-control" />
+                <span asp-validation-for="Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movement" class="control-label"></label>
+                <input asp-for="Movement" class="form-control" />
+                <span asp-validation-for="Movement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CaseMaterial" class="control-label"></label>
+                <input asp-for="CaseMaterial" class="form-control" />
+                <span asp-validation-for="CaseMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BandMaterial" class="control-label"></label>
+                <input asp-for="BandMaterial" class="form-control" />
+                <span asp-validation-for="BandMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DialColor" class="control-label"></label>
+                <input asp-for="DialColor" class="form-control" />
+                <span asp-validation-for="DialColor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BraceletColor" class="control-label"></label>
+                <input asp-for="BraceletColor" class="form-control" />
+                <span asp-validation-for="BraceletColor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagePath" class="control-label"></label>
+                <input asp-for="ImagePath" class="form-control" />
+                <span asp-validation-for="ImagePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PowerReserve" class="control-label"></label>
+                <input asp-for="PowerReserve" class="form-control" />
+                <span asp-validation-for="PowerReserve" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CaseDiameter" class="control-label"></label>
+                <input asp-for="CaseDiameter" class="form-control" />
+                <span asp-validation-for="CaseDiameter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LugToLugWidth" class="control-label"></label>
+                <input asp-for="LugToLugWidth" class="form-control" />
+                <span asp-validation-for="LugToLugWidth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Thickness" class="control-label"></label>
+                <input asp-for="Thickness" class="form-control" />
+                <span asp-validation-for="Thickness" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

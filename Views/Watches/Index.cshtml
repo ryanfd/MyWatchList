@@ -1,0 +1,101 @@
+﻿@model IEnumerable<MyWatchListWebApp.Models.Watch>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CaseMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BandMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DialColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BraceletColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagePath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PowerReserve)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CaseDiameter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LugToLugWidth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Thickness)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Movement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaseMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BandMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DialColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BraceletColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImagePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PowerReserve)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaseDiameter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LugToLugWidth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Thickness)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ReferenceNumber">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ReferenceNumber">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ReferenceNumber">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

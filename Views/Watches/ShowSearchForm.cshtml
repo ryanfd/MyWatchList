@@ -1,0 +1,63 @@
+﻿<h4>Find your Watch</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ShowSearchResults">
+            <div class="form-group">
+                <label for="SearchReferenceNumber" class="control-label">Reference Number</label>
+                <input name="SearchReferenceNumber" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="SearchBrand" class="control-label">Brand</label>
+                <input name="SearchBrand" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="SearchModel" class="control-label">Model</label>
+                <input name="SearchModel" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="SearchMovement" class="control-label">Movement</label>
+                <input name="SearchMovement" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="SearchCaseMaterial" class="control-label">Case Material</label>
+                <input name="SearchCaseMaterial" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="SearchBandMaterial" class="control-label">Band Material</label>
+                <input name="SearchBandMaterial" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="SearchDialColor" class="control-label">Dial Color</label>
+                <input name="SearchDialColor" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="SearchBraceletColor" class="control-label">Band Color</label>
+                <input name="SearchBraceletColor" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="SearchPowerReserve" class="control-label">Power Reserve</label>
+                <input name="SearchPowerReserve" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="SearchCaseDiameter" class="control-label">Case Diameter (mm)</label>
+                <input name="SearchCaseDiameter" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="SearchLugToLugWidth" class="control-label">Lug-to-Lug Width (mm)</label>
+                <input name="SearchLugToLugWidth" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="SearchThickness" class="control-label">Thickness (mm)</label>
+                <input name="SearchThickness" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
