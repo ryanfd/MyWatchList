@@ -44,9 +44,16 @@ namespace MyWatchListWebApp.Controllers
 
             return _context.Watch != null ?
                         View("Index", await _context.Watch.Where(
-                            w => (
-                                (string.IsNullOrEmpty(SearchReferenceNumber) || w.ReferenceNumber.Contains(SearchReferenceNumber))
-                            )).ToListAsync()) :
+                            w => 
+                                (string.IsNullOrEmpty(SearchReferenceNumber) || w.ReferenceNumber.Contains(SearchReferenceNumber)) &&
+                                (string.IsNullOrEmpty(SearchBrand) || w.Brand.Contains(SearchBrand)) &&
+                                (string.IsNullOrEmpty(SearchModel) || w.Model.Contains(SearchModel)) &&
+                                (string.IsNullOrEmpty(SearchMovement) || w.Movement.Contains(SearchMovement)) &&
+                                (string.IsNullOrEmpty(SearchCaseMaterial) || w.CaseMaterial.Contains(SearchCaseMaterial)) &&
+                                (string.IsNullOrEmpty(SearchBandMaterial) || w.BandMaterial.Contains(SearchBandMaterial)) &&
+                                (string.IsNullOrEmpty(SearchDialColor) || w.DialColor.Contains(SearchDialColor)) &&
+                                (string.IsNullOrEmpty(SearchBraceletColor) || w.BraceletColor.Contains(SearchBraceletColor))
+                            ).ToListAsync()) :
                         Problem("ShowSearchResults is null.");
         }
 
